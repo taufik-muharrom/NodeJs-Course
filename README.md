@@ -1,2 +1,2 @@
 # NodeJs-Course
-Node Js Course with Maximilian Schwarzmüller (Udemy)
+Node Js Course with Maximilian Schwarzmüller in Udemy
