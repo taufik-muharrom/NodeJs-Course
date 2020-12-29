@@ -1,0 +1,27 @@
+<%- include("layout/head.ejs") %>
+<%- include("layout/navigation.ejs") %>
+
+<% if (userData.length > 0) { %>
+    <div class="d-flex justify-content-center flex-wrap">
+        <% for (let user of userData) { %>
+            <div class="card" style="width: 300px; margin:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <img src=<%= user.image %> class="card-img-top" style="width: auto; height:200px;">
+                <div class="card-body">
+                    <h5 class="card-title"> <%= user.nameUser %>  </h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><%= user.email %> </h6>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <%= user.phone %>
+                    </h6>
+                </div>
+            </div>
+        <% } %> 
+    </div>
+<% } else { %> 
+    <div class="d-flex justify-content-center mt-3">
+        <h2>No User Found!</h2>
+    </div>
+    
+<% } %> 
+    
+
+<%- include("layout/end.ejs") %>
